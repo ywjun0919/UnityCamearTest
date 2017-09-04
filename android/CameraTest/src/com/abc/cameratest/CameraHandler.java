@@ -143,9 +143,9 @@ public class CameraHandler {
 	            }
            }  
 	}
+
 	
-	
-	public void startPhotoZoom(Uri uri) {
+	private void startPhotoZoom(Uri uri) {
     	Log.i("TEST", "开始裁剪" + uri);
     	
         Intent intent = new Intent("com.android.camera.action.CROP");
@@ -161,7 +161,7 @@ public class CameraHandler {
         this.m_Activity.startActivityForResult(intent, PHOTORESOULT);
     }  
 	
-	public void SaveBitmap(Bitmap bitmap,int compressRatio) throws IOException {
+	private void SaveBitmap(Bitmap bitmap,int compressRatio) throws IOException {
     	Log.i("TEST", "保存文件");
         FileOutputStream fOut = null;
         //注解
